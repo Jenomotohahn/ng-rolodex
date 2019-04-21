@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("contacts", table => {
-    table.integer("id");
+    table.increments("id").primary();
     table.string("colName").notNullable();
   });
 };
