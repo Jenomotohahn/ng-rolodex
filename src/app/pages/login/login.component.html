@@ -1,8 +1,25 @@
 <h3>Already a member?</h3>
 <div class="login-container">
   <form>
-    <input type="text" name="username" placeholder="username" />
-    <input type="text" name="password" placeholder="password" />
+    <label>
+      Email:
+    </label>
+    <input
+      type="text"
+      name="email"
+      placeholder="email"
+      [(ngModel)]="loginFormData.email"
+    />
+    <label>
+      Password:
+    </label>
+    <input
+      type="text"
+      name="password"
+      placeholder="password"
+      [(ngModel)]="loginFormData.password"
+    />
     <button class="btn">Login</button>
   </form>
+  {{ loginFormData | json }}
 </div>
