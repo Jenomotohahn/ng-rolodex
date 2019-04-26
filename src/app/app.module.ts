@@ -7,6 +7,7 @@ import { AppComponent } from "./app/app.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { NewUserComponent } from "./pages/newUser/newUser.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { NewUserComponent } from "./pages/newUser/newUser.component";
     LoginComponent,
     NewUserComponent
   ],
-  imports: [FormsModule, BrowserModule, AppRoutingModule],
+  imports: [FormsModule, BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
