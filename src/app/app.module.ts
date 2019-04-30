@@ -8,13 +8,17 @@ import { HeaderComponent } from "./shared/header/header.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { NewUserComponent } from "./pages/newUser/newUser.component";
 import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from "./pages/home/home.component";
+import { CreateContactComponent } from "./pages/create/createContact.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    NewUserComponent
+    NewUserComponent,
+    HomeComponent,
+    CreateContactComponent
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

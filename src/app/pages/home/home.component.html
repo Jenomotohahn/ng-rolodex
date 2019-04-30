@@ -1,0 +1,52 @@
+<h1>{{ user }} Rolodex</h1>
+
+<div id="search">
+  <label>Search for a contact...</label>
+  <input
+    id="search-bar"
+    type="text"
+    placeholder="search"
+    [(ngModel)]="contactSearch"
+  />
+  {{ contactSearch | json }}
+</div>
+
+<div class="contacts-list">
+  <div *ngFor="let contact of contacts">
+    <div class="card">
+      <div>
+        <h3>{{ contact.first_name + " " + contact.last_name }}</h3>
+      </div>
+      <div>
+        <label>
+          Email:
+        </label>
+        {{ contact.email }}
+      </div>
+      <div>
+        <label>
+          address:
+        </label>
+        {{ contact.address }}
+      </div>
+      <div>
+        <label>
+          Mobile:
+        </label>
+        {{ contact.mobile }}
+      </div>
+      <div>
+        <label>
+          Work:
+        </label>
+        {{ contact.work_phone }}
+      </div>
+      <div>
+        <label>
+          Notes:
+        </label>
+        {{ contact.notes }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,11 @@ import { LoginComponent } from "src/app/pages/login/login.component";
 })
 export class HeaderComponent {
   user: { username: string } = { username: "" };
+  loggedIn: boolean = true;
 
   constructor() {}
+
+  getIsLoggedIn() {
+    return this.loggedIn;
+  }
 }

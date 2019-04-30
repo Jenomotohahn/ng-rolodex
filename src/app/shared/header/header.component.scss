@@ -1,4 +1,22 @@
-.header-container {
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 5px solid whitesmoke;
   background-color: rgb(173, 241, 173);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#btn-logout {
+  margin: 5px;
+}
+
+.logged-in {
+  display: flex;
+  flex-direction: row;
+}
+a {
+  margin: 10px;
 }
