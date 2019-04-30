@@ -27,4 +27,15 @@ export class CreateContactComponent {
     notes: ""
   };
   constructor(private backend: BackendService) {}
+  createNew() {
+    console.log("hello");
+    this.backend
+      .addContact(this.newContact)
+      .then(() => {
+        console.log("new contact added");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 }

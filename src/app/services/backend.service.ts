@@ -12,7 +12,7 @@ export class BackendService {
     const endpoint = this.url + `/api/contacts/${id}`;
     return this.http.get(endpoint).toPromise();
   }
-  newContact(contact) {
+  addContact(contact) {
     const endpoint = this.url + "/api/create";
     return this.http.post(endpoint, contact).toPromise();
   }
