@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { BackendService } from "../../services/backend.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-create",
@@ -26,13 +27,15 @@ export class CreateContactComponent {
     home_phone: "",
     notes: ""
   };
-  constructor(private backend: BackendService) {}
+  constructor(private backend: BackendService, private router: Router) {}
   createNew() {
     console.log("hello");
     this.backend
       .addContact(this.newContact)
       .then(() => {
+        const id = 1; //NEED TO CHANGE THIS TO DYNAMIC!!!
         console.log("new contact added");
+        this.router.navigate([`/home`]);
       })
       .catch(err => {
         console.log(err);
