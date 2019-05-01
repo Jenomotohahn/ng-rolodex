@@ -33,7 +33,7 @@ export class CreateContactComponent {
     this.backend
       .addContact(this.newContact)
       .then(() => {
-        const id = 1; //NEED TO CHANGE THIS TO DYNAMIC!!!
+        const id = 1; //NEED TO CHANGE THIS TO DYNAMIC somehow....!!!
         console.log("new contact added");
         this.router.navigate([`/home`]);
       })

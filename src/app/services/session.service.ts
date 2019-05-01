@@ -6,4 +6,12 @@ import { BehaviorSubject } from "rxjs";
 })
 export class SessionService {
   constructor() {}
+  setSession(user: { username: string }) {
+    //save to memory first
+    this.user.username = user.username;
+    // this.user.loggedIn = true;
+    let userString = JSON.stringify(this.user);
+    window.localStorage.setItem("user", userString);
+    this._isLoggedInSubject.next(true);
+  }
 }

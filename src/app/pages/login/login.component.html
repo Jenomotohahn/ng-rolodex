@@ -19,7 +19,7 @@
       placeholder="password"
       [(ngModel)]="loginFormData.password"
     />
-    <button class="btn">Login</button>
+    <button class="btn" (click)="login()">Login</button>
   </form>
   {{ loginFormData | json }}
 </div>
